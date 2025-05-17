@@ -95,7 +95,7 @@ Used pivot tables and visualizations to explore:
 
 ## 🛠️ How to Run This Project (Windows / Linux / macOS)
 ```
-cd Predict_DataScience_Salary  
+cd path/to/repository/directory/  
 ```
 
 2️⃣ **Create a Virtual Environment**  
