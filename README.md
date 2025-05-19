@@ -123,13 +123,28 @@ Next run the data_cleaning.py file using this command:
 python data_cleaning.py
 ```
 
-Perform EDA and prepare the input for model building in the next step:
+This file will sort through a pre-existing csv file called `glassdoor_jobs.csv`, which contains information about data science jobs scraped from the Glassdoor job search engine. The script `data_cleaning.py` creates some new features that we will use later in analysis. These features include but are not limited to:
+| Feature | Description | 
+| Hourly | Boolean yes/no if the job post listed salary as an hourly wage instead of annual |
+| Minimum Salary | Lower-end of the given salary range | 
+| Maximum Salary | Upper-end of the given salary range | 
+| Average Salary | Average of the given salary range | 
+| Age | Age of the company as determined from its founded date | 
+
+There are additional columns created that store booleans which can quickly determine if a specific skill was mentioned in the job description, such as Python. 
+
+Next we can perform EDA and prepare the input for model building:
 ```
-1. Open `data_cleaning.ipynb`
+1. Open `data_cleaning.ipynb` (note that this is a Jupyter notebook and not a simple python script like in the previous step)
 2. select the kernel .venv/bin/activate
 3. run all cells. (it loads the data and cleans it)
 ```
 
+This script begins by printing basic information about the dataframe meant to familiarize the user with its structure and contents. It also walks you through several plots that show the dataframe features and their relationships. For example, it produces this correlation matrix between various features:
+
+![Correlation Matrix](./assets/correlation.png)
+
+There are also some additional, small cleaning tasks that occur in this script. For example, we remove rows with missing values, or rows that have mistakenly stored information in the wrong column. For this reason, we will produce a new csv file with our refined dataset which is called `eda_data.csv`.
 
 4️⃣ **Train and Save Models**  
 ```bash
