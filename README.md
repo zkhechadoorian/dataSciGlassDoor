@@ -146,10 +146,41 @@ This script begins by printing basic information about the dataframe meant to fa
 
 There are also some additional, small cleaning tasks that occur in this script. For example, we remove rows with missing values, or rows that have mistakenly stored information in the wrong column. For this reason, we will produce a new csv file with our refined dataset which is called `eda_data.csv`.
 
-4️⃣ **Train and Save Models**  
-```bash
-python model_building.py #(it trains the model and saves it in Flask/model/model_file.p)
+4️⃣ **Train and Evaluate Models**  
+
+In this step, we use the `model_building.ipynb` notebook to train and evaluate several machine learning models for predicting salaries for data science jobs. To run the script, do:
+
 ```
+1. Open `model_building.ipynb` 
+2. select the kernel .venv/bin/activate
+3. run all cells. (it loads the data and cleans it)
+```
+
+ The notebook explores multiple models, including:
+
+- **Linear Regression**: A baseline model for interpretability.
+- **Lasso Regression**: To handle sparsity and feature selection.
+- **Random Forest**: A powerful ensemble model that achieves the best performance.
+
+#### Example Figures:
+The notebook generates several visualizations to analyze model performance. Below are some examples:
+
+1. **Lasso Regression Alpha Tuning**  
+   This plot shows how the Mean Absolute Error (MAE) changes with different values of the regularization parameter `alpha` in Lasso Regression.  
+   ![Lasso Alpha Tuning](./assets/lasso_alpha_tuning.png)
+
+2. **Residuals vs Fitted Values**  
+   This scatter plot helps assess the goodness of fit by showing residuals against fitted values for the OLS model.  
+   ![Residuals vs Fitted](./assets/residuals_vs_fitted.png)
+
+3. **Random Forest Feature Importance**  
+   A bar chart highlighting the top 10 most important features identified by the Random Forest model.  
+   ![Feature Importance](./assets/feature_importance_rf.png)
+
+4. **Learning Curve**  
+   This plot shows the training and validation errors as a function of the training set size, helping to diagnose overfitting or underfitting.  
+   ![Learning Curve](./assets/learning_curve.png)
+
 
 5️⃣ **Start the Flask API**  
 ```bash
