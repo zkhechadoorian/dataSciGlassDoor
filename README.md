@@ -212,7 +212,7 @@ Server runs at: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ```plaintext
 Predict_DataScience_Salary/
-├── model_building.py
+├── model_building.ipynb
 ├── eda_data.csv
 ├── requirements.txt
 ├── random_forest_model.pkl
