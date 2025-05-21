@@ -226,4 +226,4 @@ Predict_DataScience_Salary/
 
 ## 📌 Final Note
 
-The trained Random Forest model is used in production via Flask and achieves a MAE of ~11K. This tool is designed to empower data scientists to better understand the market value of their skills.
+The trained Random Forest model is used in production via Flask and achieves a MAE of ~12K. This tool is designed to empower data scientists to better understand the market value of their skills.
